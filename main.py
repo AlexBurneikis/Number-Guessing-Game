@@ -5,16 +5,6 @@ minimum = 0
 answer = random.randint(minimum, maximum)
 #print(answer)
 
-def is_correct(guess):
-    if int(guess) == answer:
-        return True
-    return False
-
-def is_higher(guess):
-    if guess > answer:
-        return True
-    return False
-
 def is_number(guess):
     try:
         int(guess)
@@ -46,6 +36,16 @@ def get_guess():
         guess = input("Guess: ")
 
     return(guess)
+
+def is_correct(guess):
+    if int(guess) == answer:
+        return True
+    return False
+
+def is_higher(guess):
+    if guess > answer:
+        return True
+    return False
 
 def main():
     guessno = 0
